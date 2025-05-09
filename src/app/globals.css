@@ -1,0 +1,27 @@
+@import "tailwindcss";
+
+body {
+  min-height: 100vh;
+  font-family: "Inter", sans-serif !important;
+}
+.smooth-scroll {
+  transition: all 500ms ease-out;
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgba(255, 255, 255, 0.2);
+  border-radius: 3px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(255, 255, 255, 0.3);
+}
