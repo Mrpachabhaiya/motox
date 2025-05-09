@@ -1,15 +1,15 @@
-// components/ScreenOne.js
+"use client";
 import Image from "next/image";
 import React from "react";
 
-export const ScreenTwo = () => {
+export const ScreenTwo = ({ onClick }) => {
   const currentTime = new Date().toLocaleTimeString([], {
     hour: "2-digit",
     minute: "2-digit",
   });
   return (
-    <div className="h-full w-full bg-gradient-to-b from-[#272626] to-[#0f0f0f] flex flex-col px-4 py-3 ">
-      <div className="h-full w-full">
+    <div className="screen-two h-full w-full bg-gradient-to-b from-[#272626] to-[#0f0f0f] flex flex-col px-4 py-3 ">
+      <div className="h-full w-full ">
         <div className="flex justify-between items-center  pt-1 pb-6">
           <div className="text-sm font-medium text-gray-300">{currentTime}</div>
           <div className="flex items-center space-x-2">
@@ -54,14 +54,14 @@ export const ScreenTwo = () => {
               alt="cycle-logo"
             />
           </div>
-          <div className="relative">
+          <div className="relative cursor-pointer">
             <div className="w-10 h-10 rounded-full bg-gray-300"></div>
             <div className="absolute bottom-0 right-0 w-3 h-3 rounded-full bg-green-500 border-2 border-white"></div>
           </div>
         </div>
 
         {/* Main content */}
-        <div className="w-full flex flex-col items-start ">
+        <div className="herocontent w-full flex flex-col items-start ">
           <h1 className="text-sm font-thin text-[#FF6F00] mb-4">
             GOOD MORNING!
           </h1>
@@ -72,9 +72,8 @@ export const ScreenTwo = () => {
             Let's go for a Motorcycle ride?
           </p>
 
-          {/* Motorcycle image placeholder - replace with actual image */}
           <div
-            className=" absolute left-0 w-full h-full   "
+            className="motocycle absolute left-0 w-full h-full   "
             style={{
               backgroundImage: "url('./moto-bike1.png')",
               backgroundSize: "cover",
@@ -83,7 +82,10 @@ export const ScreenTwo = () => {
           ></div>
 
           {/* Get Started button */}
-          <button className="absolute bottom-2 bg-[#FF6F00] text-black border-none py-2 px-4 rounded-xl text-lg font-bold flex items-center justify-center mt-auto mb-8 self-center cursor-pointer">
+          <button
+            onClick={onClick}
+            className="btn absolute  bottom-2 bg-[#FF6F00] text-black border-none py-2 px-4 rounded-xl text-lg font-bold flex items-center justify-center mt-auto mb-8 self-center cursor-pointer"
+          >
             Get Started
             <span className="ml-3 text-xl ">→</span>
           </button>

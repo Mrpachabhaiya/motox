@@ -8,7 +8,7 @@ export const ScreenThree = () => {
     minute: "2-digit",
   });
   return (
-    <div className="h-full w-full bg-gradient-to-b from-[#272626] to-[#0f0f0f] flex flex-col  py-3">
+    <div className="screen-three h-full w-full bg-gradient-to-b from-[#272626] to-[#0f0f0f] flex flex-col  py-3">
       <div className=" w-full h-full relative z-20">
         <div className="flex justify-between items-center px-4  pt-0 pb-6">
           <div className="text-sm font-medium text-gray-300">{currentTime}</div>
@@ -45,7 +45,7 @@ export const ScreenThree = () => {
           </div>
         </div>
         <div
-          className=" absolute top-[-20%] w-full z-5 h-full scale-y-90   "
+          className=" bike-image absolute top-[-20%] w-full z-5 h-full scale-y-90   "
           style={{
             backgroundImage: "url('./moto-bike1.png')",
             backgroundSize: "cover",
@@ -53,14 +53,12 @@ export const ScreenThree = () => {
           }}
         ></div>
 
-        {/* Power Button near tire (GSAP Target: powerButton) */}
-        <div className="absolute z-10 left-[50%] bottom-[36%] bg-[#6beb38] rounded-xl w-12 h-12 flex items-center justify-center shadow-lg">
+        <div className="icon-power absolute z-10 left-[50%] bottom-[36%] bg-[#6beb38] rounded-xl w-12 h-12 flex items-center justify-center shadow-lg">
           <span className="text-black font-bold text-sm">
             <IoPowerSharp className="h-6 w-6 font-bold" />
           </span>
         </div>
-        <div className="absolute bottom-[25%] w-full   ">
-          {/* Time below tire (GSAP Target: tireTime) */}
+        <div className="timerbox absolute bottom-[25%] w-full   ">
           <div className="flex justify-between items-center px-9 ">
             <div className=" text-white">
               <p className="text-xs opacity-80 tracking-wide">Driving Time</p>
@@ -69,7 +67,7 @@ export const ScreenThree = () => {
             </div>
 
             {/* Clock icon box (GSAP Target: clockBox) */}
-            <div className=" bg-[#FF6F00] bg-opacity-70 w-14 h-14 rounded-xl flex items-center justify-center">
+            <div className=" timerboxa bg-[#FF6F00] bg-opacity-70 w-14 h-14 rounded-xl flex items-center justify-center">
               <svg
                 className="w-8 h-8 text-white"
                 fill="none"
@@ -87,10 +85,9 @@ export const ScreenThree = () => {
           </div>
         </div>
 
-        {/* Bottom Stats Grid */}
         <div className="absolute z-10 bottom-0 w-full  px-3">
           <div className="grid grid-cols-2 grid-rows-2 gap-4">
-            <div className="bg-[#FF6F00] bg-opacity-70 p-3 rounded-3xl row-span-2 flex items-center justify-center flex-col ">
+            <div className="charginbox bg-[#FF6F00] bg-opacity-70 p-3 rounded-3xl row-span-2 flex items-center justify-center flex-col ">
               <div className="mb-2 p-2 rounded-full bg-[#ffff]">
                 <IoMdBatteryCharging className="h-5 w-5" color="#FF6F00" />
               </div>
@@ -100,8 +97,7 @@ export const ScreenThree = () => {
               </p>
             </div>
 
-            {/* Distance (GSAP Target: distanceStats) */}
-            <div className="bg-[#ffff] bg-opacity-70 p-3 rounded-2xl flex gap-4 items-center">
+            <div className=" members bg-[#ffff] bg-opacity-70 p-3 rounded-2xl flex gap-4 items-center">
               <div className="mb-2 p-2 rounded-full bg-[#000]">
                 <IoMdBatteryCharging className="h-4 w-4" color="#fff" />
               </div>
@@ -113,8 +109,7 @@ export const ScreenThree = () => {
               </div>
             </div>
 
-            {/* Climate (GSAP Target: climateStats) */}
-            <div className="bg-[#3a3939] bg-opacity-30 p-3 rounded-2xl">
+            <div className="temperaturebox bg-[#3a3939] bg-opacity-30 p-3 rounded-2xl">
               <p className="text-white text-xl tracking-wide font-bold">21°C</p>
               <p className="text-gray-300 text-xs tracking-wide">Climate</p>
             </div>
