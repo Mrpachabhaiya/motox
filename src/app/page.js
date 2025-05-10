@@ -6,15 +6,15 @@ import { ScreenOne } from "./components/ScreenOne";
 import { Fader } from "./components/Fader";
 import { useAnimation } from "./hooks/useAnimation";
 export default function Home() {
-  const { animation, startFirstTimeline } = useAnimation();
-  return (
-    <div className="bg-black">
-      <IPhoneFrame>
-        <ScreenOne />
-        <Fader />
-        <ScreenTwo onClick={startFirstTimeline} />
-        <ScreenThree />
-      </IPhoneFrame>
-    </div>
-  );
+	const { animation, startFirstTimeline } = useAnimation();
+	return (
+		<div className="bg-black">
+			<IPhoneFrame>
+				<ScreenOne />
+				{/* <Fader /> */}
+				<ScreenTwo onClick={startFirstTimeline} />
+				<ScreenThree />
+			</IPhoneFrame>
+		</div>
+	);
 }
