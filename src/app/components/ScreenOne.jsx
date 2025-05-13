@@ -3,7 +3,7 @@ import Image from "next/image";
 
 export const ScreenOne = () => {
   return (
-    <div className="z-50 screen-one absolute w-full h-screen bg-black flex flex-col items-center justify-center">
+    <div className="z-50 screen-one absolute w-full h-full bg-black flex flex-col items-center justify-center">
       {/* Logo centered */}
       <Image alt="logo" src={"/cyclelogo1.png"} height={100} width={100} />
 
